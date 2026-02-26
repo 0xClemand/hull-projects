@@ -22,7 +22,7 @@ All scripts pull live historical data from public APIs; no local data files need
 
 ---
 
-## Chapter 1 — Introduction
+## Chapter 1 - Introduction
 
 **Script:** `portfolio_simulator.py`
 
@@ -46,7 +46,7 @@ The script prompts you for each position interactively. Type `no` when done addi
 
 ---
 
-### Example 1 — Multi-currency: global equity basket (H1 2024)
+### Example 1 - Multi-currency: global equity basket (H1 2024)
 
 Tests the automatic FX conversion. Toyota is in JPY, ASML and LVMH are in EUR. The Nikkei had a strong H1 2024 on the weak-yen tailwind and Buffett's Japan trade; ASML was buoyed by AI chip demand; LVMH was weak on the China luxury slowdown.
 
@@ -65,7 +65,7 @@ Total Portfolio P&L:                     $4289.78
 
 ---
 
-### Example 2 — Different holding periods: semiconductor cycle (2024)
+### Example 2 - Different holding periods: semiconductor cycle (2024)
 
 Each position has a different start date, which tests the forward-fill logic in the cumulative P&L chart. NVDA is held for the full year; the INTC short is only opened in May after the bad earnings print that kicked off its decline; ARM is added in March once the post-IPO lockup noise settles.
 

@@ -1,4 +1,4 @@
-# Chapter 2 — Futures Markets and Central Counterparties
+# Chapter 2 - Futures Markets and Central Counterparties
 
 Simulates a futures margin account over a holding period. Tracks daily variation margin (mark-to-market settlement), interest earned on the initial margin, margin calls when the balance drops below the maintenance threshold, and liquidation if capital runs out.
 
@@ -46,7 +46,7 @@ Use **specific expiring contracts**, not continuous front-month tickers like `GC
 
 ---
 
-## Example 1 — Long gold, H2 2025
+## Example 1 - Long gold, H2 2025
 
 Gold remained elevated and bullish in H2 2025. The leverage trade is a success with a substantial P&L and liquidation was averted despite the high leverage and two margin calls.
 
@@ -77,7 +77,7 @@ Margin calls (2):
 ```
 
 
-## Example 2 — Short gold, H2 2025 (liquidation)
+## Example 2 - Short gold, H2 2025 (liquidation)
 
 Same contract as Example 1, opposite direction. Gold remaining at high levels means consecutive negative daily settlements for the short position. With only $5000 available after posting the initial margin, the capital is too thin to absorb more than one or two top-ups before a call exceeds what's left and the position is liquidated. The end date is nominal; the script exits early and print the liquidation date.
 

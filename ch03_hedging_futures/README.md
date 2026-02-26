@@ -1,4 +1,4 @@
-# Chapter 3 — Hedging Strategies Using Futures
+# Chapter 3 - Hedging Strategies Using Futures
 
 Implements the minimum-variance hedge ratio (h*) from Hull Chapter 3. Estimates h* via OLS regression of spot vs. futures price changes over the 6 months preceding the hedge, then simulates the hedged position over the hedge period and compares P&L variance against the P&L variance of the unhedged spot exposure.
 
@@ -47,7 +47,7 @@ Use **specific expiring contracts**, not continuous front-month tickers like `CL
 > The same futures ticker is used for both the 6-month estimation window and the hedge period. Make sure the chosen contract was already actively trading 6 months before your start date.
 
 
-## Example 1 — Hedge gold ETF with gold futures (H2 2025)
+## Example 1 - Hedge gold ETF with gold futures (H2 2025)
 
 GLD tracks the gold spot price very closely. This should produce a very high correlation and h* near 1, with substantial variance reduction — a near-perfect hedge.
 
@@ -79,7 +79,7 @@ Variance reduction:             87.11%
 
 ---
 
-## Example 2 — Cross-hedge: gold miners ETF with gold futures (H2 2025)
+## Example 2 - Cross-hedge: gold miners ETF with gold futures (H2 2025)
 
 GDX holds gold mining companies, which are correlated with gold but not as tightly as GLD: miners also carry equity risk, operational leverage, and currency exposure. This makes it a cross-hedge: the hedging instrument (gold futures) is related to but not the same as the underlying risk. The correlation and variance reduction we get are lower, but still significant.
 
