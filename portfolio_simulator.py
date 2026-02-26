@@ -109,7 +109,7 @@ if __name__ == "__main__":
         pnl_df['Total Portfolio P&L'] = pnl_df.sum(axis=1)
 
         ax = pnl_df.drop(columns=['Total Portfolio P&L']).plot(figsize=(12, 6), grid = True, alpha = 0.7, title = "Cumulative P&L of Portfolio Over Time", xlabel = "Date", ylabel = "Cumulative P&L ($)")
-        ax.plot(pnl_df.index, pnl_df['Total Portfolio P&L'], label='Total Portfolio P&L', color='black', linewidth=2) # Plot total portfolio P&L separately as a bold black line
+        pnl_df['Total Portfolio P&L'].plot(ax=ax, label='Total Portfolio P&L', color='black', linewidth=2) # Plot total portfolio P&L separately as a bold black line
         plt.legend()
         plt.tight_layout()
         plt.show()  
