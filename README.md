@@ -48,7 +48,7 @@ The script prompts you for each position interactively. Type `no` when done addi
 
 ### Example 1 - Multi-currency: global equity basket (H1 2024)
 
-Tests the automatic FX conversion. Toyota is in JPY, ASML and LVMH are in EUR. The Nikkei had a strong H1 2024 on the weak-yen tailwind and Buffett's Japan trade; ASML was buoyed by AI chip demand; LVMH was weak on the China luxury slowdown.
+Tests the automatic FX conversion. Toyota is in JPY, ASML and LVMH are in EUR.
 
 ```
 position 1:  7203.T   |  2024-01-02  |  2024-06-28  |  long   |  500 shares   (Toyota, JPY)
