@@ -12,7 +12,7 @@ python ch02_futures_markets/futures_margin_simulator.py
 | Prompt | Description | Example |
 |--------|-------------|---------|
 | Ticker | Specific futures contract (see format below) | `GCZ25.CMX` |
-| Start / End date | Holding period — must fall within the contract's active window | `2025-07-01` / `2025-11-25` |
+| Start / End date | Holding period - must fall within the contract's active window | `2025-07-01` / `2025-11-25` |
 | Position size | Number of contracts (integer) | `1` |
 | Contract multiplier | Units of underlying per contract | `100` for gold, `1000` for crude oil, `50` for E-mini S&P |
 | Direction | `long` / `short` | |
@@ -27,7 +27,7 @@ python ch02_futures_markets/futures_margin_simulator.py
 ROOT + MONTH_LETTER + TWO_DIGIT_YEAR + .EXCHANGE
 ```
 
-Use **specific expiring contracts**, not continuous front-month tickers like `GC=F` — those roll over daily and would give different results depending on when the script is run.
+Use **specific expiring contracts**, not continuous front-month tickers like `GC=F`, those are rolling based on today's date and would give different results depending on when the script is run.
 
 | Month | Code | | Exchange | Code |
 |-------|------|-|----------|------|
@@ -79,7 +79,7 @@ Margin calls (2):
 
 ## Example 2 - Short gold, H2 2025 (liquidation)
 
-Same contract as Example 1, opposite direction. Gold remaining at high levels means consecutive negative daily settlements for the short position. With only $5000 available after posting the initial margin, the capital is too thin to absorb more than one or two top-ups before a call exceeds what's left and the position is liquidated. The end date is nominal; the script exits early and print the liquidation date.
+Same contract as Example 1, opposite direction. Gold remaining at high levels means consecutive negative daily settlements for the short position. With only $7000 available after posting the initial margin, the capital is too thin to absorb more than one or top-up before a call exceeds remaining capital and the position is liquidated. The end date is nominal; the script exits early and print the liquidation date.
 
 ```
 Ticker:                 GCZ25.CMX

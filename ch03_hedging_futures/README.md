@@ -27,7 +27,7 @@ The script automatically fetches the 6-month estimation window before your start
 ROOT + MONTH_LETTER + TWO_DIGIT_YEAR + .EXCHANGE
 ```
 
-Use **specific expiring contracts**, not continuous front-month tickers like `CL=F` — those roll over and would give different results depending on when the script is run.
+Use **specific expiring contracts**, not continuous front-month tickers like `CL=F`, those are rolling based on today's date and would give different results depending on when the script is run.
 
 | Month | Code | | Exchange | Code |
 |-------|------|-|----------|------|
@@ -44,12 +44,12 @@ Use **specific expiring contracts**, not continuous front-month tickers like `CL
 | November | X | | | |
 | December | Z | | | |
 
-> The same futures ticker is used for both the 6-month estimation window and the hedge period. Make sure the chosen contract was already actively trading 6 months before your start date.
+> The same futures ticker is used for both the 6-month estimation window and the hedge period. Make sure the chosen contract was already actively trading 6 months before the start date.
 
 
 ## Example 1 - Hedge gold ETF with gold futures (H2 2025)
 
-GLD tracks the gold spot price very closely. This should produce a very high correlation and h* near 1, with substantial variance reduction — a near-perfect hedge.
+GLD tracks the gold spot price very closely. This produces a very high correlation with substantial variance reduction; a near-perfect hedge. 
 
 ```
 Spot ticker:          GLD
