@@ -9,6 +9,7 @@ The purpose of this repository is to showcase my work through *Options, Futures,
 | 1 | Introduction | [portfolio_simulator.py](portfolio_simulator.py) |
 | 2 | Futures Markets and Central Counterparties | [futures_margin_simulator.py](ch02_futures_markets/futures_margin_simulator.py) |
 | 3 | Hedging Strategies Using Futures | [hedge_ratio_calculator.py](ch03_hedging_futures/hedge_ratio_calculator.py) |
+| 4 | Interest Rates | [yield_curve_bootstrap.py](ch04_interest_rates/yield_curve_bootstrap.py) |
 
 ## Setup
 
