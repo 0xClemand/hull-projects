@@ -1,4 +1,4 @@
-"""1. Introduction - project"""
+"""Chapter 1: Introduction - portfolio simulator with multi-currency P&L and cumulative chart"""
 
 import yfinance as yf 
 import matplotlib.pyplot as plt 

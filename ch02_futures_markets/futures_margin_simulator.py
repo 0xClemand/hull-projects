@@ -1,4 +1,4 @@
-"""2. Futures markets and central counterparties - project"""
+"""Chapter 2: Futures Markets and Central Counterparties - margin account simulator with daily mark-to-market and liquidation"""
 
 import sys
 import os

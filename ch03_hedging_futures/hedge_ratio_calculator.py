@@ -1,4 +1,4 @@
-"""3. Hedging strategies using Futures - project"""
+"""Chapter 3: Hedging Strategies Using Futures - optimal hedge ratio calculator with regression analysis and hedge performance"""
 
 import sys
 import os
