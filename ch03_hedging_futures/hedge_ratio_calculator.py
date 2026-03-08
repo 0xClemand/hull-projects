@@ -2,7 +2,7 @@
 
 import sys
 import os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "ch01_introduction"))
 from portfolio_simulator import Asset, Position
 import pandas as pd
 import matplotlib.pyplot as plt
