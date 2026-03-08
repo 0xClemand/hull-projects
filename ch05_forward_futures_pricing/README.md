@@ -104,7 +104,7 @@ EUR/USD (spot = $1.1608)
 One subplot per asset. Left axis: spot (black dot) and futures price curve. Right axis: implied carry bars with the risk-free rate for reference.
 
 - S&P 500: gentle upward slope (contango), carry ~0.7% = implied dividend yield, well below r
-- WTI Crude: steep downward slope (strong backwardation), carry ~23-46% = net convenience yield far exceeding storage costs, declining at longer tenors as the supply premium fades (the example was run on March 8th 2026, in a context of geopolitical shock with the conflict in Iran)
+- WTI Crude: steep downward slope (strong backwardation), carry ~23-46% = net convenience yield far exceeding storage costs, declining at later expiries as the supply premium fades (the example was run on March 8th 2026, in a context of geopolitical shock with the conflict in Iran)
 - EUR/USD: gentle upward slope, carry ~2.2% = implied EUR rate, consistent with covered interest rate parity
 
 ![Implied carry chart](implied_carry_ex.png)
