@@ -77,6 +77,9 @@ Variance of hedged daily P&L:  $710404.28
 Variance reduction:             87.11%
 ```
 
+![Regression chart](regression_ex1.png)
+![Hedge performance chart](hedge_performance_ex1.png)
+
 ---
 
 ## Example 2 - Cross-hedge: gold miners ETF with gold futures (H2 2025)
@@ -108,3 +111,6 @@ Variance of spot daily P&L:    $3067619.35
 Variance of hedged daily P&L:  $1366102.95
 Variance reduction:             55.47%
 ```
+
+![Regression chart](regression_ex2.png)
+![Hedge performance chart](hedge_performance_ex2.png)

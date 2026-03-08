@@ -1,7 +1,8 @@
 """Chapter 1: Introduction - portfolio simulator with multi-currency P&L and cumulative chart"""
 
-import yfinance as yf 
-import matplotlib.pyplot as plt 
+import os
+import yfinance as yf
+import matplotlib.pyplot as plt
 import pandas as pd
 
 
@@ -112,4 +113,5 @@ if __name__ == "__main__":
         pnl_df['Total Portfolio P&L'].plot(ax=ax, label='Total Portfolio P&L', color='black', linewidth=2) # Plot total portfolio P&L separately as a bold black line
         plt.legend()
         plt.tight_layout()
-        plt.show()  
+        plt.savefig(os.path.join(os.path.dirname(os.path.abspath(__file__)), "portfolio_pnl.png"), dpi=150, bbox_inches="tight")
+        plt.show()

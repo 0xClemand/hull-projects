@@ -66,6 +66,8 @@ Single figure with par yield, zero rate, and forward rate curves (all in BEY):
 - Smooth spline curves for par and zero rates, with scatter dots at the 11 data points
 - Step plot for forward rates, each step within its maturity interval [Ti, Ti+1]
 
+![Yield curve chart](yield_curve_ex.png)
+
 ---
 
 ## Data source

@@ -76,6 +76,8 @@ Margin calls (2):
  2025-07-31: $2374.44
 ```
 
+![Margin account chart](margin_account_ex1.png)
+
 
 ## Example 2 - Short gold, H2 2025 (liquidation)
 
@@ -108,3 +110,5 @@ Margin calls (2):
  2025-07-21: $5756.65
  2025-07-22: $3888.90
 ```
+
+![Margin account chart](margin_account_ex2.png)

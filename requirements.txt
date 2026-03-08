@@ -1,7 +1,7 @@
 yfinance
-requests
 pandas
 matplotlib
 numpy
 scipy
 python-dateutil
+requests

@@ -36,6 +36,7 @@ def calculate_hedge_ratio(spot_prices, futures_prices):
     plt.title('Linear regression of daily price changes (from 6 months before to the start of the hedge)')
     plt.legend()
     plt.tight_layout()
+    plt.savefig(os.path.join(os.path.dirname(os.path.abspath(__file__)), "regression.png"), dpi=150, bbox_inches="tight")
     plt.show(block=False)
 
     return h_star, rho, effectiveness
@@ -131,4 +132,5 @@ if __name__ == "__main__":
     ax.legend()
     ax.grid(True, alpha=0.5)
     plt.tight_layout()
+    plt.savefig(os.path.join(os.path.dirname(os.path.abspath(__file__)), "hedge_performance.png"), dpi=150, bbox_inches="tight")
     plt.show()

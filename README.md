@@ -14,6 +14,8 @@ The purpose of this repository is to showcase my work through *Options, Futures,
 ## Setup
 
 ```bash
+git clone https://github.com/0xClemand/hull-projects.git
+cd hull-projects
 pip install -r requirements.txt
 ```
 
@@ -64,6 +66,8 @@ SHORT position in MC.PA has a P&L of:   $383.53
 Total Portfolio P&L:                     $4289.78
 ```
 
+![Portfolio P&L chart](portfolio_pnl_ex1.png)
+
 ---
 
 ### Example 2 - Different holding periods: semiconductor cycle (2024)
@@ -82,3 +86,5 @@ SHORT position in INTC has a P&L of:  $2047.30
 LONG position in ARM has a P&L of:    $-785.50
 Total Portfolio P&L:                   $3941.13
 ```
+
+![Portfolio P&L chart](portfolio_pnl_ex2.png)

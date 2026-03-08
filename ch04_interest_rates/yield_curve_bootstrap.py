@@ -1,5 +1,6 @@
 """Chapter 4: Interest Rates - yield curve bootstrapping, forward rates computation, and bond pricing"""
 
+import os
 import numpy as np
 import requests
 import matplotlib.pyplot as plt
@@ -133,6 +134,7 @@ def plot_curves(maturities, par_yields, zero_rates, forward_rates):
     plt.legend()
     plt.grid(True, linestyle="--", alpha=0.5)
     plt.tight_layout()
+    plt.savefig(os.path.join(os.path.dirname(os.path.abspath(__file__)), "yield_curve.png"), dpi=150, bbox_inches="tight")
     plt.show()
 
 

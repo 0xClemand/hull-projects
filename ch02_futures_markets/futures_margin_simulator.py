@@ -150,4 +150,5 @@ if __name__ == "__main__":
     ax.legend()
     ax.grid(True, alpha=0.3)
     plt.tight_layout()
+    plt.savefig(os.path.join(os.path.dirname(os.path.abspath(__file__)), "margin_account.png"), dpi=150, bbox_inches="tight")
     plt.show()
