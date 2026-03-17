@@ -38,6 +38,8 @@ Edit these constants at the top of the script:
 The TCF.xlsx file must be placed in the same folder as the script. Download from:
 https://www.cmegroup.com/trading/interest-rates/treasury-conversion-factors.html
 
+The file included in this repo was downloaded on March 15, 2026. The example output below was produced on March 17, 2026, targeting the ZBM26 contract (30-year T-bond futures, June 2026 delivery).
+
 ---
 
 ## Output
