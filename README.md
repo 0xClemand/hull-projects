@@ -21,4 +21,4 @@ cd hull-projects
 pip install -r requirements.txt
 ```
 
-All scripts pull live historical data from public APIs; no local data files needed. Results are fully reproducible with the examples of user inputs in each chapter's README.
+Most scripts pull live data from public APIs; some chapters require local data files as noted in their README. Results are fully reproducible with the examples of user inputs in each chapter's README.
