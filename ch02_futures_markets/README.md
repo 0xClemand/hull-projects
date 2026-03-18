@@ -1,6 +1,6 @@
 # Chapter 2 - Futures Markets and Central Counterparties
 
-Simulates a futures margin account over a holding period. Tracks daily variation margin (mark-to-market settlement), interest earned on the initial margin, margin calls when the balance drops below the maintenance threshold, and liquidation if capital runs out.
+Simulates a futures margin account over a holding period. Tracks daily variation margin (mark-to-market settlement), interest earned on the opening balance each day (before that day's variation margin is settled), margin calls when the balance drops below the maintenance threshold, and liquidation if capital runs out.
 
 ```bash
 # run from the project root
@@ -66,14 +66,14 @@ Maintenance margin:     0.75
 Results:
 
 ```
-Final margin account balance:  $82688.87
-Remaining capital:             $1384.44
-Total interest earned:         $163.33
-Total P&L:                     $69073.32
+Final margin account balance:  $83415.73
+Remaining capital:             $1395.64
+Total interest earned:         $901.38
+Total P&L:                     $69811.36
 
 Margin calls (2):
- 2025-07-08: $3241.11
- 2025-07-31: $2374.44
+ 2025-07-08: $3241.29
+ 2025-07-31: $2363.07
 ```
 
 ![Margin account chart](margin_account_ex1.png)
@@ -102,12 +102,12 @@ Results:
 Insufficient capital to meet margin call. Position liquidated on 2025-07-22
 
 Final margin account balance: $4111.10
-Remaining capital: $1243.35
-Total interest earned: $24.44
-Total P&L: $-9645.55
+Remaining capital: $1243.72
+Total interest earned: $24.81
+Total P&L: $-9645.18
 
 Margin calls (2):
- 2025-07-21: $5756.65
+ 2025-07-21: $5756.28
  2025-07-22: $3888.90
 ```
 

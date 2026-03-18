@@ -37,7 +37,7 @@ def simulate_margin_account(variation_margin, initial_margin, maintenance_margin
 
     current_balance = initial_margin
     for date, pnl in variation_margin.items():
-        interest = initial_margin * (interest_rate / 360) * calendar_days[date] # Dividing the annual rate by 360 is the convention for most money markets instruments / As per the Hull, interest is only earned on the initial margin, not on the variation margin
+        interest = current_balance * (interest_rate / 360) * calendar_days[date] # Dividing the annual rate by 360 is the convention for most money markets instruments / Interest accrues on the opening balance (before today's variation margin is settled)
         current_balance += pnl + interest
         total_interest += interest
         margin_account[date] = current_balance
