@@ -87,3 +87,11 @@ US Treasury constant-maturity yields via [FRED](https://fred.stlouisfed.org).
 | DGS10 | 10-Year |
 | DGS20 | 20-Year |
 | DGS30 | 30-Year |
+
+---
+
+## Notes
+
+- **Bootstrapping** works iteratively from the shortest maturity. Each par yield implies a zero rate at that maturity, given all the zero rates already solved at shorter maturities. For maturities up to 1 year (zero-coupon bills), the par yield equals the zero rate directly. For longer maturities, the algorithm strips out coupons discounted at known shorter zero rates and solves for the remaining zero rate.
+- **BEY to CC conversion.** FRED reports Treasury yields as semi-annual bond-equivalent yields (BEY). The script converts these to continuously compounded (CC) rates for internal calculations using `r_cc = 2 * ln(1 + r_bey/2)`. All output curves are converted back to BEY for display, since BEY is the standard quoting convention for Treasuries.
+- **Treasury vs OIS rates.** This script uses Treasury yields as the risk-free rate. In practice, OIS (Overnight Index Swap) rates based on SOFR are the standard for derivatives pricing, as they better reflect the true risk-free rate without the credit and liquidity premia embedded in Treasuries. For this project, we are building the zero curve for Treasury rates and pricing a Treasury bond so the data used is correct and appropriate.

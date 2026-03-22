@@ -114,3 +114,12 @@ Variance reduction:             55.47%
 
 ![Regression chart](regression_ex2.png)
 ![Hedge performance chart](hedge_performance_ex2.png)
+
+---
+
+## Notes
+
+- The 6-month estimation window is a practical choice. It needs to be long enough to capture a meaningful sample of spot-futures co-movement, but short enough that the relationship remains stationary. 6 months of daily data gives roughly 125 observations, which is sufficient for OLS.
+- The hedge ratio h* is assumed constant over the entire hedge period. In practice, hedge ratios drift as the spot-futures relationship evolves, and hedgers re-estimate and rebalance periodically (dynamic hedging). This script only uses a single static estimate.
+- **Variance reduction** is the primary metric for hedge effectiveness, not P&L. A good hedge reduces the uncertainty of the outcome, not necessarily its level. A hedge that produces lower P&L but dramatically lower variance is doing its job. R-squared from the estimation regression gives the expected variance reduction; the actual variance reduction is then calculated.
+- The script rounds to fractional contracts when computing the futures position size. In practice, contract sizes are discrete and the hedge ratio may need to be rounded, introducing more basis risk.

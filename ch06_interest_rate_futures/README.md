@@ -87,3 +87,12 @@ One plot showing price/CF for all 59 bonds across yield shifts. Non-CTD bonds ar
 The chart is consistent with Hull's remarks in Chapter 6: when yields are low (curve shifted down), high-coupon short-maturity bonds become CTD; when yields are high, low-coupon long-maturity bonds tend to claim the spot.
 
 ![CTD sensitivity chart](ctd_sensitivity_ex.png)
+
+---
+
+## Notes
+
+- **What conversion factors are.** A T-bond futures contract contains a basket of potential deliverable bonds and allows the short side to deliver any eligible Treasury bond they choose once the contract expires. Since bonds have different coupons and maturities, their prices differ. The conversion factor (CF) adjusts for this: it is the price of the bond per dollar of face value assuming a flat 6% yield curve. Conversion factors for each bond are fixed, computed once at the inception of the life of the futures contract. The delivery cost is `quoted price - futures price * CF`. The bond with the lowest delivery cost is cheapest-to-deliver (CTD). In practice, as yields change over time, the CF adjustments become imperfect, creating a delivery option for the short.
+- **Why the CTD changes with yields.** When yields move lower than expected, high-coupon short-maturity bonds tend to be CTD because their CFs overstate their price less than low-coupon long-maturity bonds. When yields move higher than expected, the reverse holds. This is visible in the sensitivity chart: the CTD switches from high-coupon to low-coupon bonds as the yield curve shifts upward.
+- **Forward curve derivation.** Bond pricing at the delivery date uses a forward zero curve, not the spot curve. The forward rate from the delivery date to maturity T is derived as `r_fwd(t) = (r_spot(t0+t)*(t0+t) - r_spot(t0)*t0) / t`, where `t0` is the time to delivery. This prices each bond as it would be valued on the delivery date, which is relevant in determining the CTD because that is when the choice of bond delivery will be made by the short party.
+- **Accrued interest.** The script computes clean prices (dirty price minus accrued interest) using Actual/Actual day count, which is the convention for US Treasuries. This matters because futures delivery is based on quoted (clean) prices.

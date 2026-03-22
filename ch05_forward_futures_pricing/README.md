@@ -108,3 +108,10 @@ One subplot per asset. Left axis: spot (black dot) and futures price curve. Righ
 - EUR/USD: gentle upward slope, carry ~2.2% = implied EUR rate, consistent with covered interest rate parity
 
 ![Implied carry chart](implied_carry_ex.png)
+
+---
+
+## Notes
+
+- **Time to maturity approximation.** TTM is derived from the ticker symbol by parsing the month code and year, then assuming expiry on the 15th of that month. Actual expiry dates vary by exchange and contract (e.g. CME E-mini S&P expires on the third Friday). The error is at most a few days, which has negligible impact on the implied carry.
+- **Convexity adjustment ignored.** The cost-of-carry formula assumes futures and forwards are interchangeable. In practice, the daily mark-to-market of futures introduces a convexity bias relative to forwards. The effect is small for short-dated contracts and is ignored here.

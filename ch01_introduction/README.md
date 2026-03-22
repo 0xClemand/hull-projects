@@ -10,6 +10,17 @@ python ch01_introduction/portfolio_simulator.py
 
 The script prompts you for each position interactively. Type `no` when done adding positions.
 
+The `Asset` and `Position` classes defined here are reused as shared imports by later chapters.
+
+---
+
+## Notes
+
+- P&L is computed from price returns only (no dividends or distributions are included)
+- All positions are independent: no margin, leverage, or other risk metrics
+
+---
+
 ## Parameters
 
 | Prompt | Example |

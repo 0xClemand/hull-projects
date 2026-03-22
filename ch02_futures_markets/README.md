@@ -112,3 +112,11 @@ Margin calls (2):
 ```
 
 ![Margin account chart](margin_account_ex2.png)
+
+---
+
+## Notes
+
+- Interest accrues daily on the opening margin balance (before that day's settlement, thereby excluding variation margin), using an Actual/360 day count convention.
+- Specific expiring contracts are used rather than continuous front-month tickers (e.g. `GCZ25.CMX` instead of `GC=F`). Continuous tickers roll automatically based on the current date, which means they would produce different price histories depending on when the script is run.
+- The maintenance margin is expressed as a fraction of initial margin (default 0.75, i.e. 75%). When the account balance falls below this threshold at the end of a trading day, the entire deficit back to the initial margin level must be posted as fresh collateral. If the required top-up exceeds remaining capital, the position is liquidated.
