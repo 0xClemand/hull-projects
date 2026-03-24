@@ -13,6 +13,7 @@ The purpose of this repository is to showcase my work through *Options, Futures,
 | 5 | Determination of Forward and Futures Prices | [implied_carry_calculator.py](ch05_forward_futures_pricing/implied_carry_calculator.py) |
 | 6 | Interest Rate Futures | [ctd_bond_finder.py](ch06_interest_rate_futures/ctd_bond_finder.py) |
 | 7 | Swaps | [currency_swap_pricer.py](ch07_swaps/currency_swap_pricer.py) |
+| 8 | Securitization and the Financial Crisis of 2007–8 | [cdo_tranche_pricer.py](ch08_securitization/cdo_tranche_pricer.py) |
 
 ## Setup
 
@@ -22,4 +23,4 @@ cd hull-projects
 pip install -r requirements.txt
 ```
 
-Most scripts pull live data from public APIs; some chapters require local data files as noted in their README. Results are fully reproducible with the examples of user inputs in each chapter's README.
+Most scripts pull live data from public APIs; some chapters require local data files or a FRED API key as noted in their README. Results are fully reproducible with the examples of user inputs in each chapter's README.

@@ -6,3 +6,5 @@ scipy
 python-dateutil
 requests
 openpyxl
+fredapi
+python-dotenv
